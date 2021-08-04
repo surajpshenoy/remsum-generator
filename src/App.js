@@ -30,7 +30,9 @@ function App() {
       </button>
       </form>
       <article className="lorem-text">
-        <p> Generated text here</p>
+        {text.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
       </article>
     </section>
   );
