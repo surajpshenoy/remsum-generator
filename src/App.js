@@ -7,9 +7,17 @@ function App() {
   const submitHandler = (event) => {
     event.preventDefault();
     let amount = parseInt(count)
+
+    if(count  <= 0)
+    {
+      amount = 1;
+    } 
+    if(count > data.length - 1){
+      amount = 9;
+    }
     setText(data.slice(0, amount));
-    
-  };
+    }
+
 
   return (
     <section className="section-center">
