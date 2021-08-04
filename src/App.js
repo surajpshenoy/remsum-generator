@@ -6,8 +6,9 @@ function App() {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setText(data);
-    console.log(text)
+    let amount = parseInt(count)
+    setText(data.slice(0, amount));
+    
   };
 
   return (
@@ -16,7 +17,7 @@ function App() {
       <form className="lorem-form" onSubmit={submitHandler}>
         <label htmlFor="amount">Paragraphs:</label>
         <input
-          type="text"
+          type="number"
           name="amount"
           id="amount"
           value={count}
